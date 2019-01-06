@@ -1,9 +1,13 @@
 version: 2
 jobs:
   test:
+    docker:
+      - image: circleci/node: 10.15.0-browsers-legacy
     steps:
       - run: echo 'test'
   build:
+    docker:
+      - image: circleci/node: 10.15.0-browsers-legacy
     steps:
       - checkout
       - run: echo 'build'
