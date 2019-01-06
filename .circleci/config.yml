@@ -4,12 +4,14 @@ jobs:
     docker:
       - image: circleci/node:10.15.0-browsers-legacy
     steps:
+      - run: sudo npm install -g npm@latest
       - run: echo 'test'
   build:
     docker:
       - image: circleci/node:10.15.0-browsers-legacy
     steps:
       - checkout
+      - run: sudo npm install -g npm@latest
       - run: echo 'build'
 workflows:
   version: 2
