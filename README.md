@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/hellocomrade/htalk.svg?style=svg)](https://circleci.com/gh/hellocomrade/htalk)
+
 # Htalk
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
