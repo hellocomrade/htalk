@@ -11,6 +11,10 @@ export class AppComponent {
   messages: Message[];
 
   constructor() {
-    this.messages = [new Message("Welcome!", new Date())];
+      this.messages = [];
+  }
+
+  OnQuestionSubmitted(question: string) {
+      this.messages.push(new Message(question, new Date));
   }
 }

@@ -6,6 +6,7 @@
 </div>
 <div>
   <chat-list [messages] = "messages"></chat-list>
+  <message-input (QuestionSubmitted) = "OnQuestionSubmitted($event)"></message-input>
 </div>
 
 <router-outlet></router-outlet>
