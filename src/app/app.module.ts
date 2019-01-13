@@ -6,7 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChatListComponent } from '@app/components/chat-list/chat-list.component';
 import { MessageItemComponent } from '@app/components/message-item/message-item.component';
-import { MessageInputComponent } from './components/message-input/message-input.component';
+import { MessageInputComponent } from '@app/components/message-input/message-input.component';
+import { DialogflowService } from '@app/services/dialogflow.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { MessageInputComponent } from './components/message-input/message-input.
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DialogflowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
