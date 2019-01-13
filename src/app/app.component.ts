@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Message } from '@app/poto';
+import { DialogflowService } from '@app/services/dialogflow.service';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +11,14 @@ export class AppComponent {
   title: string = 'htalk';
   messages: Message[];
 
-  constructor() {
+  constructor(private chatBotService: DialogflowService) {
       this.messages = [];
   }
 
   OnQuestionSubmitted(question: string) {
-      this.messages.push(new Message(question, new Date));
+      this.messages.push(new Message(question, new Date()));
+      this.chatBotService.sendQuestion(question).then((res) => {
+        this.messages.push(new Message(res.fulfillment.speech, new Date()));
+      });
   }
 }

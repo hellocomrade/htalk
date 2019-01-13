@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ChatListComponent } from '@app/components/chat-list/chat-list.component';
 import { MessageItemComponent } from '@app/components/message-item/message-item.component';
 import { MessageInputComponent } from '@app/components/message-input/message-input.component';
-import { DialogflowService } from '@app/services/dialogflow.service';
+import { DialogflowService, DS_ACCESS_TOKEN } from '@app/services/dialogflow.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,10 @@ import { DialogflowService } from '@app/services/dialogflow.service';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [DialogflowService],
+  providers: [
+    DialogflowService,
+    {provide: DS_ACCESS_TOKEN, useValue: 'ed7d5ae664294264a95587d2253107bd'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

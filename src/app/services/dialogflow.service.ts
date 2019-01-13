@@ -1,9 +1,23 @@
-import { Injectable } from '@angular/core';
+import { Injectable, InjectionToken, Inject } from '@angular/core';
+import {ApiAiClient} from "api-ai-javascript/es6/ApiAiClient";
+
+export const DS_ACCESS_TOKEN = new InjectionToken<string>('title');
 
 @Injectable({
   providedIn: 'root'
 })
 export class DialogflowService {
+  private apiAiClient: ApiAiClient;
 
-  constructor() { }
+  constructor(@Inject(DS_ACCESS_TOKEN) accessToken: string) { 
+    this.apiAiClient = new ApiAiClient({accessToken});
+  }
+  sendQuestion(question: string): Promise<{}> {
+      return new Promise<{}>((resolve, reject) => {
+          this.apiAiClient.textRequest(question).then((response) => {
+              resolve(response.result);
+          });
+        
+      });
+  }
 }
