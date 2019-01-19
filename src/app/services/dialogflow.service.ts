@@ -1,7 +1,7 @@
 import { Injectable, InjectionToken, Inject } from '@angular/core';
 import {ApiAiClient} from "api-ai-javascript/es6/ApiAiClient";
 
-export const DS_ACCESS_TOKEN = new InjectionToken<string>('title');
+export const DS_ACCESS_TOKEN = new InjectionToken<string>('CLIENT_ACCESS_CODE_HERE');
 
 @Injectable({
   providedIn: 'root'

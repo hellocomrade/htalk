@@ -23,7 +23,7 @@ import { DialogflowService, DS_ACCESS_TOKEN } from '@app/services/dialogflow.ser
   ],
   providers: [
     DialogflowService,
-    {provide: DS_ACCESS_TOKEN, useValue: 'REPLACE_ME'}
+    {provide: DS_ACCESS_TOKEN, useValue: ''}
   ],
   bootstrap: [AppComponent]
 })
