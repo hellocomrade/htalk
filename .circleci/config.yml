@@ -13,6 +13,7 @@ jobs:
       - checkout
       - run: sudo npm install -g npm@latest
       - run: echo 'build'
+      - run: echo npm install -g @angular-cli
       - run: npm install
       - run: ng build
 workflows:
