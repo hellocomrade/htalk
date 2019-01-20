@@ -5,7 +5,10 @@ jobs:
       - image: circleci/node:10.15.0-browsers-legacy
     steps:
       - run: sudo npm install -g npm@latest
+      - run: sudo npm install -g @angular/cli
       - run: echo 'test'
+      - run: npm install
+      - run: ng test --watch=false
   build:
     docker:
       - image: circleci/node:10.15.0-browsers-legacy

@@ -1,5 +1,5 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core'
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ChatListComponent } from './chat-list.component';
 
 describe('ChatListComponent', () => {
@@ -8,7 +8,8 @@ describe('ChatListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChatListComponent ]
+      declarations: [ ChatListComponent ],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   }));

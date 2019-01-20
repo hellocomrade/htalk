@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Message } from '@app/poto';
 
 @Component({
   selector: 'message-item',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MessageItemComponent implements OnInit {
   @Input('message')
-  message: string;
+  message: Message;
   constructor() { }
 
   ngOnInit() {

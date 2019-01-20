@@ -13,6 +13,7 @@ export class AppComponent {
 
   constructor(private chatBotService: DialogflowService) {
       this.messages = [];
+      this.title = 'htalk';
   }
 
   OnQuestionSubmitted(question: string) {

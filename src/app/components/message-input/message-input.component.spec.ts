@@ -1,6 +1,6 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core'
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { MessageInputComponent } from './message-input.component';
+import { MessageInputComponent } from '@app/components/message-input/message-input.component';
 
 describe('MessageInputComponent', () => {
   let component: MessageInputComponent;
@@ -8,7 +8,8 @@ describe('MessageInputComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MessageInputComponent ]
+      declarations: [ MessageInputComponent ],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   }));

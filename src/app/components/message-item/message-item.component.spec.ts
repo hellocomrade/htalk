@@ -1,5 +1,5 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core'
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MessageItemComponent } from './message-item.component';
 
 describe('MessageItemComponent', () => {
@@ -8,7 +8,8 @@ describe('MessageItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MessageItemComponent ]
+      declarations: [ MessageItemComponent ],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   }));

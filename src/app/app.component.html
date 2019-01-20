@@ -4,7 +4,7 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<div>
+<div class = "chatwindow">
   <chat-list [messages] = "messages"></chat-list>
   <message-input (QuestionSubmitted) = "OnQuestionSubmitted($event)"></message-input>
 </div>

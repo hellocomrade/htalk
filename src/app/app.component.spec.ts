@@ -1,6 +1,8 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core'
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import { AppComponent } from '@app/app.component';
+import { DialogflowService, DS_ACCESS_TOKEN } from '@app/services/dialogflow.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -11,6 +13,11 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      providers: [
+        DialogflowService,
+        {provide: DS_ACCESS_TOKEN, useValue: 'dummy'}
+      ],
+      schemas: [NO_ERRORS_SCHEMA] //https://stackoverflow.com/questions/44504468/angular-2-karma-test-component-name-is-not-a-known-element
     }).compileComponents();
   }));
 

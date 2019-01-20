@@ -2,6 +2,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@app/*": ["src/app/*"] //for ng test to recognize dependency resolution using relative path such as @app/* */
+    },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
