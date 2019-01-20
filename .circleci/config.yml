@@ -1,6 +1,7 @@
 version: 2
 jobs:
   test:
+    working_directory: ~/htalk
     docker:
       - image: circleci/node:10.15.0-browsers-legacy
     steps:
@@ -10,6 +11,7 @@ jobs:
       - run: npm install
       - run: ng test --watch=false
   build:
+    working_directory: ~/htalk
     docker:
       - image: circleci/node:10.15.0-browsers-legacy
     steps:
