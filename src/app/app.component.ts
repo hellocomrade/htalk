@@ -17,9 +17,9 @@ export class AppComponent {
   }
 
   OnQuestionSubmitted(question: string) {
-      this.messages.push(new Message(question, new Date()));
+      this.messages.push(new Message(question, false, new Date()));
       this.chatBotService.sendQuestion(question).then((res) => {
-        this.messages.push(new Message(res['fulfillment']['speech'], new Date()));
+        this.messages.push(new Message(res['fulfillment']['speech'], true, new Date()));
       });
   }
 }

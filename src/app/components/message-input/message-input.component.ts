@@ -15,6 +15,7 @@ export class MessageInputComponent implements OnInit {
 
   sendMessage() {
       this.QuestionSubmitted.emit(this.question);
+      this.question = '';
   }
 
   ngOnInit() {
